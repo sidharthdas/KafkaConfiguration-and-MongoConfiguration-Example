@@ -33,6 +33,11 @@ public class EmployeeServices {
         return list;
     }
 
+    public Map<String, Object> getEmployeeByName(String empName){
+        FindIterable<Map> data = mongoDatabase.getCollection("employee").find(new Document("empName", empName),Map.class);
+        return data.first();
+    }
+
     public String updateEmployee(Map<String, Object> map){
         MongoCollection<Document> employeeCollection = mongoDatabase.getCollection("employee");
         String empId = (String)map.get("empId");

@@ -12,7 +12,7 @@ import java.util.Map;
  * created on  04/10/22
  */
 @RestController
-@RequestMapping("employee")
+@RequestMapping("employees")
 @AllArgsConstructor
 public class EmployeeController {
 
@@ -27,6 +27,11 @@ public class EmployeeController {
     @GetMapping("all-employees")
     public List<Map<String, Object>> getAllEmployee(){
         return employeeServices.getEmployee();
+    }
+
+    @GetMapping("employee")
+    public Map<String, Object> getEmployeeByName(@RequestParam String empName){
+        return employeeServices.getEmployeeByName(empName);
     }
 
     @PostMapping("insert-employee")
