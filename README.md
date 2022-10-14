@@ -1,6 +1,23 @@
-# KafkaConfiguration-and-MongoConfiguration-Example
-
+#Project Configuration for KafkaConfiguration-and-MongoConfiguration-Example
 Required java 17 and kafka in local system
+
+#Kafka Operation:
+
+- Send Data To Kafka Topic
+
+```
+kafkaBean.publishRecords("test1", 0, "test", "hello world", null);
+```
+
+- Read Data From Kafka Topic
+
+```
+ConsumerRecord c1 = (ConsumerRecord) consumerRecords.records("test1").iterator().next();
+        System.out.println("Value : "+ c1.value());
+        System.out.println("Key : " +  c1.key());
+```
+
+
 
 # MongoDB Operation:
 
