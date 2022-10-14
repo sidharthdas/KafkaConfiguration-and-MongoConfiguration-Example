@@ -1,7 +1,7 @@
-#Project Configuration for KafkaConfiguration-and-MongoConfiguration-Example
+# Project Configuration for KafkaConfiguration-and-MongoConfiguration-Example
 Required java 17 and kafka in local system
 
-#Kafka Operation:
+# Kafka Operation:
 
 - Send Data To Kafka Topic
 
