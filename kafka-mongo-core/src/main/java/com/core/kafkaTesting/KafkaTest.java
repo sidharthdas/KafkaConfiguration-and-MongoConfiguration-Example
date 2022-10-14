@@ -22,7 +22,6 @@ public class KafkaTest {
     public void init(){
         kafkaBean.publishRecords("test1", 0, "test", "hello world", null);
         ConsumerRecords consumerRecords = kafkaBean.getRecords();
-        System.out.println();
         ConsumerRecord c1 = (ConsumerRecord) consumerRecords.records("test1").iterator().next();
         System.out.println("Value : "+ c1.value());
         System.out.println("Key : " +  c1.key());
